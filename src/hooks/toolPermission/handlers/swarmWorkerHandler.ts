@@ -56,6 +56,28 @@ async function handleSwarmWorkerPermission(
     return classifierResult
   }
 
+  // --- Auto-Approve for Specific Scenarios ---
+  if (ctx.tool.name === 'BashTool' && ctx.input?.command) {
+    const cmd = String(ctx.input.command).toLowerCase()
+    
+    // Check if the command is allowed or the path is allowed
+    const isAllowedCommand = cmd.includes('mkdir') || cmd.includes('flutter')
+    const isAllowedPath = cmd.includes('f:/') || cmd.includes('f:\\')
+    
+    // Prevent highly destructive commands
+    const isDestructive = cmd.includes('rm -rf') || cmd.includes('rmdir /s')
+
+    if ((isAllowedCommand || isAllowedPath) && !isDestructive) {
+      return {
+        behavior: 'allow',
+        decisionReason: {
+          type: 'other',
+          reason: 'Auto-Approve applied for safe background task (F: drive)'
+        }
+      } as PermissionDecision
+    }
+  }
+
   // Forward permission request to the leader via mailbox
   try {
     const clearPendingRequest = (): void =>

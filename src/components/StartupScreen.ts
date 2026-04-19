@@ -63,22 +63,24 @@ const BORDER: RGB = [100, 80, 65]
 
 // ─── Filled Block Text Logo ───────────────────────────────────────────────────
 
-const LOGO_OPEN = [
-  `  \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557 \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557 \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557 \u2588\u2588\u2557  \u2588\u2588\u2557`,
-  `  \u2588\u2588\u2554\u2550\u2550\u2550\u2588\u2588\u2551 \u2588\u2588\u2554\u2550\u2550\u2550\u2588\u2588\u2551 \u2588\u2588\u2554\u2550\u2550\u2550\u2550\u2550\u255d \u2588\u2588\u2588\u2557 \u2588\u2588\u2551`,
-  `  \u2588\u2588\u2551   \u2588\u2588\u2551 \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2551 \u2588\u2588\u2588\u2588\u2588\u2588\u2557   \u2588\u2588\u2588\u2588\u2557\u2588\u2588\u2551`,
-  `  \u2588\u2588\u2551   \u2588\u2588\u2551 \u2588\u2588\u2554\u2550\u2550\u2550\u2550\u2550\u255d \u2588\u2588\u2554\u2550\u2550\u2550\u255d   \u2588\u2588\u2554\u2588\u2588\u2588\u2588\u2551`,
-  `  \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2551 \u2588\u2588\u2551       \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557 \u2588\u2588\u2551 \u255a\u2588\u2588\u2588\u2551`,
-  `  \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d \u255a\u2550\u255d       \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d \u255a\u2550\u255d  \u255a\u2550\u2550\u255d`,
+// HNI
+const LOGO_HNI = [
+  `  ██╗  ██╗ ███╗  ██╗ ██╗`,
+  `  ██║  ██║ ████╗ ██║ ██║`,
+  `  ███████║ ██╔██╗██║ ██║`,
+  `  ██╔══██║ ██║╚████║ ██║`,
+  `  ██║  ██║ ██║ ╚███║ ██║`,
+  `  ╚═╝  ╚═╝ ╚═╝  ╚══╝ ╚═╝   Hunmatric Net Indonesia`,
 ]
 
-const LOGO_CLAUDE = [
-  `  \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557 \u2588\u2588\u2557      \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557 \u2588\u2588\u2557   \u2588\u2588\u2557 \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557 \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557`,
-  `  \u2588\u2588\u2554\u2550\u2550\u2550\u2550\u2550\u255d \u2588\u2588\u2551      \u2588\u2588\u2554\u2550\u2550\u2550\u2588\u2588\u2551 \u2588\u2588\u2551   \u2588\u2588\u2551 \u2588\u2588\u2554\u2550\u2550\u2550\u2588\u2588\u2551 \u2588\u2588\u2554\u2550\u2550\u2550\u2550\u2550\u255d`,
-  `  \u2588\u2588\u2551       \u2588\u2588\u2551      \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2551 \u2588\u2588\u2551   \u2588\u2588\u2551 \u2588\u2588\u2551   \u2588\u2588\u2551 \u2588\u2588\u2588\u2588\u2588\u2588\u2557  `,
-  `  \u2588\u2588\u2551       \u2588\u2588\u2551      \u2588\u2588\u2554\u2550\u2550\u2550\u2588\u2588\u2551 \u2588\u2588\u2551   \u2588\u2588\u2551 \u2588\u2588\u2551   \u2588\u2588\u2551 \u2588\u2588\u2554\u2550\u2550\u2550\u255d  `,
-  `  \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557 \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557\u2588\u2588\u2551   \u2588\u2588\u2551 \u255a\u2588\u2588\u2588\u2588\u2588\u2588\u2554\u255d \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2551 \u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2557`,
-  `  \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\u255a\u2550\u255d   \u255a\u2550\u255d  \u255a\u2550\u2550\u2550\u2550\u2550\u255d  \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d`,
+// DEV TEAM
+const LOGO_DEVTEAM = [
+  `  ██████╗  ███████╗ ██╗   ██╗    ████████╗ ███████╗  █████╗  ███╗   ███╗`,
+  `  ██╔══██╗ ██╔════╝ ██║   ██║    ╚══██╔══╝ ██╔════╝ ██╔══██╗ ████╗ ████║`,
+  `  ██║  ██║ █████╗   ██║   ██║       ██║    █████╗   ███████║ ██╔████╔██║`,
+  `  ██║  ██║ ██╔══╝   ╚██╗ ██╔╝       ██║    ██╔══╝   ██╔══██║ ██║╚██╔╝██║`,
+  `  ██████╔╝ ███████╗  ╚████╔╝        ██║    ███████╗ ██║  ██║ ██║ ╚═╝ ██║`,
+  `  ╚═════╝  ╚══════╝   ╚═══╝         ╚═╝    ╚══════╝ ╚═╝  ╚═╝ ╚═╝     ╚═╝`,
 ]
 
 // ─── Provider detection ───────────────────────────────────────────────────────
@@ -139,13 +141,13 @@ function detectProvider(): { name: string; model: string; baseUrl: string; isLoc
       name = 'Meta Llama'
     else if (isLocal)
       name = getLocalOpenAICompatibleProviderLabel(baseUrl)
-    
+
     // Resolve model alias to actual model name + reasoning effort
     let displayModel = resolvedRequest.resolvedModel
     if (resolvedRequest.reasoning?.effort) {
       displayModel = `${displayModel} (${resolvedRequest.reasoning.effort})`
     }
-    
+
     return { name, model: displayModel, baseUrl, isLocal }
   }
 
@@ -178,7 +180,7 @@ export function printStartupScreen(): void {
   out.push('')
 
   // Gradient logo
-  const allLogo = [...LOGO_OPEN, '', ...LOGO_CLAUDE]
+  const allLogo = [...LOGO_HNI, '', ...LOGO_DEVTEAM]
   const total = allLogo.length
   for (let i = 0; i < total; i++) {
     const t = total > 1 ? i / (total - 1) : 0
@@ -192,7 +194,7 @@ export function printStartupScreen(): void {
   out.push('')
 
   // Tagline
-  out.push(`  ${rgb(...ACCENT)}\u2726${RESET} ${rgb(...CREAM)}Any model. Every tool. Zero limits.${RESET} ${rgb(...ACCENT)}\u2726${RESET}`)
+  out.push(`  ${rgb(...ACCENT)}\u2726${RESET} ${rgb(...CREAM)}HNI Dev Team \u2014 AI Multi-Agent Squad${RESET} ${rgb(...ACCENT)}\u2726${RESET}`)
   out.push('')
 
   // Provider info box
@@ -206,10 +208,10 @@ export function printStartupScreen(): void {
   const provC: RGB = p.isLocal ? [130, 175, 130] : ACCENT
   let [r, l] = lbl('Provider', p.name, provC)
   out.push(boxRow(r, W, l))
-  ;[r, l] = lbl('Model', p.model)
+    ;[r, l] = lbl('Model', p.model)
   out.push(boxRow(r, W, l))
   const ep = p.baseUrl.length > 38 ? p.baseUrl.slice(0, 35) + '...' : p.baseUrl
-  ;[r, l] = lbl('Endpoint', ep)
+    ;[r, l] = lbl('Endpoint', ep)
   out.push(boxRow(r, W, l))
 
   out.push(`${rgb(...BORDER)}\u2560${'\u2550'.repeat(W - 2)}\u2563${RESET}`)
@@ -221,7 +223,7 @@ export function printStartupScreen(): void {
   out.push(boxRow(sRow, W, sLen))
 
   out.push(`${rgb(...BORDER)}\u255a${'\u2550'.repeat(W - 2)}\u255d${RESET}`)
-  out.push(`  ${DIM}${rgb(...DIMCOL)}openclaude ${RESET}${rgb(...ACCENT)}v${MACRO.DISPLAY_VERSION ?? MACRO.VERSION}${RESET}`)
+  out.push(`  ${DIM}${rgb(...DIMCOL)}hni-dev-team ${RESET}${rgb(...ACCENT)}v${MACRO.DISPLAY_VERSION ?? MACRO.VERSION}${RESET}`)
   out.push('')
 
   process.stdout.write(out.join('\n') + '\n')

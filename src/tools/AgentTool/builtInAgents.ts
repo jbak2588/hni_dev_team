@@ -8,6 +8,9 @@ import { GENERAL_PURPOSE_AGENT } from './built-in/generalPurposeAgent.js'
 import { PLAN_AGENT } from './built-in/planAgent.js'
 import { STATUSLINE_SETUP_AGENT } from './built-in/statuslineSetup.js'
 import { VERIFICATION_AGENT } from './built-in/verificationAgent.js'
+import { DEVOPS_AGENT } from './built-in/devOpsAgent.js'
+import { DBA_AGENT } from './built-in/dbaAgent.js'
+import { UIUX_AGENT } from './built-in/uiUxAgent.js'
 import type { AgentDefinition } from './loadAgentsDir.js'
 
 export function areExplorePlanAgentsEnabled(): boolean {
@@ -45,6 +48,9 @@ export function getBuiltInAgents(): AgentDefinition[] {
   const agents: AgentDefinition[] = [
     GENERAL_PURPOSE_AGENT,
     STATUSLINE_SETUP_AGENT,
+    DEVOPS_AGENT,
+    DBA_AGENT,
+    UIUX_AGENT,
   ]
 
   if (areExplorePlanAgentsEnabled()) {

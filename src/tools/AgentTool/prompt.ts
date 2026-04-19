@@ -1,3 +1,5 @@
+import fs from 'fs'
+import path from 'path'
 import { getFeatureValue_CACHED_MAY_BE_STALE } from '../../services/analytics/growthbook.js'
 import { getSubscriptionType } from '../../utils/auth.js'
 import { hasEmbeddedSearchTools } from '../../utils/embeddedTools.js'
@@ -238,6 +240,17 @@ When NOT to use the ${AGENT_TOOL_NAME} tool:
 - Launch multiple agents concurrently whenever possible, to maximize performance; to do that, use a single message with multiple tool uses`
       : ''
 
+  // --- Shared Memory (Auto-Injected Context) ---
+  let sharedMemory = ''
+  try {
+    const memoryPath = path.join(process.cwd(), 'Architecture.md')
+    if (fs.existsSync(memoryPath)) {
+      sharedMemory = `\n\n# Shared Workspace Memory (Architecture.md)\n${fs.readFileSync(memoryPath, 'utf8')}\n`
+    }
+  } catch (e) {
+    // ignore
+  }
+
   // Non-coordinator gets the full prompt with all sections
   return `${shared}
 ${whenNotToUseSection}
@@ -273,5 +286,5 @@ Usage notes:
         : ''
   }${whenToForkSection}${writingThePromptSection}
 
-${forkEnabled ? forkExamples : currentExamples}`
+${forkEnabled ? forkExamples : currentExamples}${sharedMemory}`
 }

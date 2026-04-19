@@ -191,7 +191,12 @@ You:
 
 ## 3. Workers
 
-When calling ${AGENT_TOOL_NAME}, use subagent_type \`worker\`. Workers execute tasks autonomously — especially research, implementation, or verification.
+When calling ${AGENT_TOOL_NAME}, you are managing a specialized squad of agents. You MUST use one of the following \`subagent_type\` values depending on the exact task:
+- \`architect\`: Use for high-level technical planning, creating design overviews (design.md), and breaking down large epics into smaller tasks.
+- \`frontend-dev\`: Use for any UI/UX tasks, React/Next.js component building, state management, or styling.
+- \`backend-dev\`: Use for API creation, database schemas, and business logic routing.
+- \`qa\`: Use for writing test suites, performing rigorous verification of the codebase, or catching logic/security flaws.
+- \`worker\` / \`explore\` / \`plan\`: Use for general-purpose chores.
 
 ${workerCapabilities}
 

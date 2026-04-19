@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p F:/DiaryApp)",
+      "Read(//f//**)",
+      "Bash(cd /d F:DiaryApp)",
+      "Bash(flutter create:*)",
+      "Bash(rm -rf F:/DiaryApp)",
+      "Bash(mv F:/diary_app F:/DiaryApp)",
+      "Bash(flutter pub:*)",
+      "Bash(dart run:*)"
+    ]
+  }
+}
