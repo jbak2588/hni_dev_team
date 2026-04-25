@@ -6,7 +6,7 @@
  *
  * Usage:
  *   openclaude --provider openai --model gpt-4o
- *   openclaude --provider gemini --model gemini-2.0-flash
+ *   openclaude --provider gemini --model gemini-3.1-pro-preview
  *   openclaude --provider mistral --model ministral-3b-latest
  *   openclaude --provider ollama --model llama3.2
  *   openclaude --provider anthropic   (default, no-op)

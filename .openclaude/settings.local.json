@@ -8,7 +8,15 @@
       "Bash(rm -rf F:/DiaryApp)",
       "Bash(mv F:/diary_app F:/DiaryApp)",
       "Bash(flutter pub:*)",
-      "Bash(dart run:*)"
+      "Bash(dart run:*)",
+      "Bash(ls:*)",
+      "Bash(npm install:*)",
+      "Bash(bun add:*)",
+      "Bash(grep -E \"\\\\-[0-9]+\\\\-[0-9]+\\(\\\\-[0-9]+\\\\-[0-9]+\\)?\\\\.pdf$|[-_]복사\\\\.pdf$|[-_]Copy\\\\.pdf$\")",
+      "Bash(grep -E \"[-_]복사\\\\.pdf$|[-_]Copy\\\\.pdf$|_OCR_OCR\\\\.pdf$\")",
+      "Bash(sort -u fragments_and_copies.txt -o fragments_and_copies.txt)",
+      "Bash(xargs -I {} rm \"{}\")",
+      "Bash(find:*)"
     ]
   }
 }

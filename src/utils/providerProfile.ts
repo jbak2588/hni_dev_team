@@ -36,7 +36,7 @@ import { PROVIDERS } from './configConstants.js'
 export const PROFILE_FILE_NAME = '.openclaude-profile.json'
 export const DEFAULT_GEMINI_BASE_URL =
   'https://generativelanguage.googleapis.com/v1beta/openai'
-export const DEFAULT_GEMINI_MODEL = 'gemini-2.0-flash'
+export const DEFAULT_GEMINI_MODEL = 'gemini-3.1-pro-preview'
 export const DEFAULT_MISTRAL_BASE_URL = 'https://api.mistral.ai/v1'
 export const DEFAULT_MISTRAL_MODEL = 'devstral-latest'
 

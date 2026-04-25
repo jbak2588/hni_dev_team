@@ -185,6 +185,7 @@ const OPENAI_CONTEXT_WINDOWS: Record<string, number> = {
   'gemini-2.5-pro':                1_048_576,
   'gemini-2.5-flash':              1_048_576,
   'gemini-3.1-pro':                1_048_576,
+  'gemini-3.1-pro-preview':        1_048_576,
   'gemini-3.1-flash-lite-preview': 1_048_576,
 
   // Ollama local models
@@ -337,6 +338,7 @@ const OPENAI_MAX_OUTPUT_TOKENS: Record<string, number> = {
   'gemini-2.5-pro':                65_536,
   'gemini-2.5-flash':              65_536,
   'gemini-3.1-pro':                65_536,
+  'gemini-3.1-pro-preview':        65_536,
   'gemini-3.1-flash-lite-preview': 65_536,
 
   // Ollama local models (conservative safe defaults)

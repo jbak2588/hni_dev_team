@@ -43,7 +43,7 @@ export function getSmallFastModel(): ModelName {
   if (process.env.ANTHROPIC_SMALL_FAST_MODEL) return process.env.ANTHROPIC_SMALL_FAST_MODEL
   // For Gemini provider, use a fast model
   if (getAPIProvider() === 'gemini') {
-    return process.env.GEMINI_MODEL || 'gemini-2.0-flash-lite'
+    return process.env.GEMINI_MODEL || 'gemini-3.1-pro-preview'
   }
   if (getAPIProvider() === 'mistral') {
     return process.env.MISTRAL_MODEL || 'ministral-3b-latest'
@@ -140,7 +140,7 @@ export function getDefaultOpusModel(): ModelName {
   }
   // Gemini provider
   if (getAPIProvider() === 'gemini') {
-    return process.env.GEMINI_MODEL || 'gemini-2.5-pro-preview-03-25'
+    return process.env.GEMINI_MODEL || 'gemini-3.1-pro-preview'
   }
   // Mistral provider
   if (getAPIProvider() === 'mistral') {
@@ -174,7 +174,7 @@ export function getDefaultSonnetModel(): ModelName {
   }
   // Gemini provider
   if (getAPIProvider() === 'gemini') {
-    return process.env.GEMINI_MODEL || 'gemini-2.0-flash'
+    return process.env.GEMINI_MODEL || 'gemini-3.1-pro-preview'
   }
   // Mistral provider
   if (getAPIProvider() === 'mistral') {
@@ -222,7 +222,7 @@ export function getDefaultHaikuModel(): ModelName {
   }
   // Gemini provider
   if (getAPIProvider() === 'gemini') {
-    return process.env.GEMINI_MODEL || 'gemini-2.0-flash-lite'
+    return process.env.GEMINI_MODEL || 'gemini-3.1-pro-preview'
   }
 
   // Haiku 4.5 is available on all platforms (first-party, Foundry, Bedrock, Vertex)
@@ -279,7 +279,7 @@ export function getDefaultMainLoopModelSetting(): ModelName | ModelAlias {
   }
   // Gemini provider: always use the configured Gemini model
   if (getAPIProvider() === 'gemini') {
-    return process.env.GEMINI_MODEL || 'gemini-2.0-flash'
+    return process.env.GEMINI_MODEL || 'gemini-3.1-pro-preview'
   }
   if (getAPIProvider() === 'mistral') {
     return process.env.MISTRAL_MODEL || 'devstral-latest'

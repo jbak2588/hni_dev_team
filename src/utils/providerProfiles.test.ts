@@ -121,7 +121,7 @@ function buildGeminiProfile(overrides: Partial<ProviderProfile> = {}): ProviderP
   return buildProfile({
     provider: 'gemini',
     baseUrl: 'https://generativelanguage.googleapis.com/v1beta/openai',
-    model: 'gemini-3-flash-preview',
+    model: 'gemini-3.1-pro-preview',
     ...overrides,
   })
 }
@@ -172,7 +172,7 @@ describe('applyProviderProfileToProcessEnv', () => {
 
     expect(process.env.CLAUDE_CODE_USE_GEMINI).toBe('1')
     expect(process.env.CLAUDE_CODE_USE_OPENAI).toBeUndefined()
-    expect(process.env.GEMINI_MODEL).toBe('gemini-3-flash-preview')
+    expect(process.env.GEMINI_MODEL).toBe('gemini-3.1-pro-preview')
     expect(getFreshAPIProvider()).toBe('gemini')
   })
 

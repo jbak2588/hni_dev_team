@@ -179,7 +179,7 @@ export function getProviderPresetDefaults(
         provider: 'gemini',
         name: 'Google Gemini',
         baseUrl: 'https://generativelanguage.googleapis.com/v1beta/openai',
-        model: 'gemini-3-flash-preview',
+        model: 'gemini-3.1-pro-preview',
         apiKey: '',
         requiresApiKey: true,
       }
@@ -829,6 +829,7 @@ export function setActiveProviderProfile(
             baseUrl: activeProfile.baseUrl,
             apiKey: activeProfile.apiKey,
             processEnv: process.env,
+            goal: 'latency'
           }) ?? null
         )
     }
